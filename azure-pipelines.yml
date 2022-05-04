@@ -1,5 +1,5 @@
 schedules:
-- cron: 20 10 4 05 *
+- cron: 20 9 11 05 *
   branches:
     include:
     - master
