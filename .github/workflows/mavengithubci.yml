@@ -26,8 +26,12 @@ jobs:
     name: Run the SCA scan on the source code
     steps:
       - uses: actions/checkout@master
+      - name: Giving Permission to maven
+        run: chmod +x mvnw
       - name: RunSnyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+          
